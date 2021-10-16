@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai pt bac 2</title>
+</head>
+<body>
+a = <input type="text" id="so1">
+b = <input type="text" id="so2">
+c = <input type="text" id="so3">
+<input type="button" value="result" onclick="Result()">
+<h5 id="kq"></h5>
+</body>
+<script>
+    function Result() {
+        let number = +document.getElementById('so1').value;
+        let number2 = +document.getElementById('so2').value;
+        let number3 = +document.getElementById('so3').value;
+        let delta = number2 ** 2 - 4 * (number * number3)
+        if (delta < 0) {
+            document.getElementById('kq').innerHTML = " Phương trình vô nghiệm "
+        } else if (delta == 0) {
+            document.getElementById('kq').innerHTML = " Phương trình có nghiệm kép x1 = x2 = " + -number2 / number * 2
+        } else {
+            document.getElementById('kq').innerHTML = " Phương trình có 2 nghiệm phân biệt " + " x1 = " +((-number2 + Math.sqrt(delta)) / 2 * number) + " x2 = " + ((-number2 - Math.sqrt(delta)) / 2 * number)
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pham Duc Thang</title>
+</head>
+<body>
+a <input type="text" id="t1">
+b <input type="text" id="t2">
+c <input type="text" id="t3">
+<input type="button" value="Kiểm Tra" onclick="Result()">
+<p id="t4"></p>
+</body>
+<script>
+    function Result() {
+        let number = +document.getElementById('t1').value;
+        let number2 = +document.getElementById('t2').value;
+        let number3 = +document.getElementById('t3').value;
+        if (number> 0 && number2> 0 && number3 > 0 &&  (number + number2 > number3 ) && ( number2 + number3 > number) && (number + number3 > number2)){
+            document.getElementById('t4').innerHTML = "Đây là hình tam giác"
+        }else {
+            document.getElementById('t4').innerHTML = "Đây không phải hình tam giác"
+        }
+    }
+</script>
+</html>

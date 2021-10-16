@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Pham Duc thang</title>
+</head>
+<body>
+<input type="text" id="t1">
+<input type="button" value="Tính Tiền" onclick="result()">
+<p id="kq"></p>
+</body>
+<script>
+    function result() {
+        let number = document.getElementById('t1').value;
+        if (number < 100){
+            document.getElementById('kq').innerHTML = " Tiền điện tháng này là : " + (number*3000)
+        }else if (number < 500){
+            document.getElementById('kq').innerHTML =  " Tiền điện tháng này là : " + (number*4000)
+        }else {
+            document.getElementById('kq').innerHTML =  " Tiền điện tháng này là : " + (number*5000)
+        }
+    }
+</script>
+</html>
